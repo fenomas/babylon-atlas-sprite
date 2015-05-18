@@ -98,3 +98,18 @@ AtlasSprite.prototype.setFrame = function(frame) {
   this.currentFrame = frame
 }
 
+
+
+// dispose method - disposes babylon objects
+
+AtlasSprite.prototype.dispose = function() {
+  this.texture.dispose()
+  this.material.dispose()
+  this.mesh.dispose()
+  this._data = null
+  this._pending = true
+  this.currentFrame = ''
+  this.frames.length = 0
+}
+
+

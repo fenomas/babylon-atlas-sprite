@@ -46,4 +46,5 @@ sprite.setFrame(frameName)
 
 sprite.setFrame(num) // same as: sprite.setFrame(sprite.frames[num]) 
 
+sprite.dispose()
 ```
