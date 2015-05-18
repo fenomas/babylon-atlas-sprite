@@ -17,7 +17,7 @@ sprite.mesh.position.x = 5
 sprite.setFrame( 'frame003' )
 ```
 
-Live demo [here](http://andyhall.github.io/babylon-sprite/example/).
+Live demo [here](http://andyhall.github.io/babylon-atlas-sprite/example/).
 
 ### Installation
 
