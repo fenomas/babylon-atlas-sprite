@@ -83,18 +83,42 @@ AtlasSprite.prototype.setFrame = function(frame) {
   }
 
   var tex = this.texture
-  var s = tex.getSize()
+  var size = tex.getSize()
 
   var w = dat.frame.w
   var h = dat.frame.h
   var x = dat.frame.x
   var y = dat.frame.y
+  var sw = size.width
+  var sh = size.height
 
-  tex.uScale = w/s.width
-  tex.vScale = h/s.height
-  tex.uOffset = ( s.width /2 - x)/w - 0.5
-  tex.vOffset = (-s.height/2 + y)/h + 0.5
+  // in Babylon 2.2 and below:
+  // tex.uScale = w/sw
+  // tex.vScale = h/sh
+  // tex.uOffset = ( sw /2 - x)/w - 0.5
+  // tex.vOffset = (-sh/2 + y)/h + 0.5
+  
+  // Babylon 2.3 and above:
+  tex.uScale =   w / sw
+  tex.vScale =   h / sh
+  tex.uOffset =  x / sw
+  tex.vOffset =  (sh-y-h)/sh
 
   this.currentFrame = frame
 }
+
+
+
+// dispose method - disposes babylon objects
+
+AtlasSprite.prototype.dispose = function() {
+  this.texture.dispose()
+  this.material.dispose()
+  this.mesh.dispose()
+  this._data = null
+  this._pending = true
+  this.currentFrame = ''
+  this.frames.length = 0
+}
+
 

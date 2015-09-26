@@ -1,6 +1,6 @@
 {
   "name": "babylon-atlas-sprite",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "description": "A texture-atlas sprite class for Babylon.js",
   "main": "index.js",
   "directories": {
@@ -22,6 +22,10 @@
   },
   "scripts": {
     "test": "beefy example/example.js:bundle.js 8080 --cwd example --live --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andyhall/babylon-atlas-sprite"
   },
   "author": "Andy Hall",
   "license": "MIT"
