@@ -1,6 +1,6 @@
 {
   "name": "babylon-atlas-sprite",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "A texture-atlas sprite class for Babylon.js",
   "main": "index.js",
   "directories": {
